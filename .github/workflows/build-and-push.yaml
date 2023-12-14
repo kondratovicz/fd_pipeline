@@ -27,4 +27,4 @@ jobs:
         password: ${{ secrets.GHCR_PASSWORD }}
 
     - name: Build and push Docker image
-      run: docker buildx build -t ${{ github.repository_owner }}:latest
+      run: docker buildx build -t ${{ github.repository_owner }}:latest --push
