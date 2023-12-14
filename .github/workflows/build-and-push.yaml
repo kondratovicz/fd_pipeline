@@ -27,4 +27,4 @@ jobs:
         password: ${{ secrets.GHCR_PASSWORD }}
 
     - name: Build and push Docker image
-      run: docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:${{ github.sha }} .
+      run: docker buildx build -t ${{ github.repository_owner }}:latest
