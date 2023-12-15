@@ -24,12 +24,12 @@ jobs:
         password: ${{ secrets.GHCR_PASSWORD }}
 
     - name: Build and Push Docker Image
-        run: |
-          docker buildx create --use
-          docker buildx build \
-            --platform linux/amd64,linux/arm64 \
-            -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest \
-            -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:${{ github.sha }} \
-            .
-          docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest
-          docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:${{ github.sha }}
+      run: |
+        docker buildx create --use
+        docker buildx build \
+          --platform linux/amd64,linux/arm64 \
+          -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest \
+          -t ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:${{ github.sha }} \
+          .
+        docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:latest
+        docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository_name }}:${{ github.sha }}
