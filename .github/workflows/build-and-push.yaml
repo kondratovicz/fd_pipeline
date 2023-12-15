@@ -30,4 +30,4 @@ jobs:
       uses: docker/build-push-action@v5.1.0
       with:
           push: true
-          tags: $GITHUB_USER/app:latest
+          tags: ${{ github.repository_owner }}/app:latest
