@@ -26,5 +26,8 @@ jobs:
         username: $GITHUB_USER
         password: ${{ secrets.GHCR_PASSWORD }}
 
-    - name: Build and push Docker image
-      run: docker buildx build -t ${{ github.repository_owner }}:latest .
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v5.1.0
+      with:
+          push: true
+          tags: $GITHUB_USER/app:latest
