@@ -28,5 +28,5 @@ jobs:
         docker buildx create --use
         docker buildx build \
           --platform linux/amd64 \
-        -t poebatkak:latest .
-        docker push poebatkak:latest
+        -t ghcr.io/poebatkak:latest .
+        docker push ghcr.io/poebatkak:latest
