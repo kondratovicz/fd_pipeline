@@ -28,5 +28,5 @@ jobs:
         docker buildx create --use
         docker buildx build \
           --platform linux/amd64 \
-        -t ${{ github.repository_name }}:latest .
-        docker push ${{ github.repository_name }}:latest
+        -t poebatkak:latest .
+        docker push poebatkak:latest
