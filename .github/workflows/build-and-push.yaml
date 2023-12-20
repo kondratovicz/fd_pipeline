@@ -30,4 +30,4 @@ jobs:
           --platform linux/amd64 \
           --load \
         -t app:latest .
-        docker push ghcr.io/kondratovicz/app:latest
+        docker push ghcr.io/kondratovicz/fd_pipeline/app:latest
