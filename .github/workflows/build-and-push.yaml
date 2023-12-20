@@ -28,5 +28,5 @@ jobs:
         docker buildx create --use
         docker buildx build \
           --platform linux/amd64 \
-        -t ghcr.io/kondratovicz:latest .
-        docker push ghcr.io/kondratovicz:latest
+        -t app:latest .
+        docker push ghcr.io/kondratovicz/app:latest
