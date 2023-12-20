@@ -29,5 +29,5 @@ jobs:
         docker buildx build \
           --platform linux/amd64 \
           --load \
-        -t app:latest .
+        -t ghcr.io/kondratovicz/fd_pipeline/app:latest .
         docker push ghcr.io/kondratovicz/fd_pipeline/app:latest
