@@ -7,4 +7,4 @@ def hello():
     return '<h1>Ma Nishma?</h1>'
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
